@@ -1,0 +1,108 @@
+/* General container styling */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f5f7fa;
+  min-height: 100vh;
+}
+
+/* Header styling */
+.header {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+/* Form styling */
+.form,
+.offer-help-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 500px;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form input,
+.form textarea,
+.offer-help-form input,
+.offer-help-form textarea {
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form input:focus,
+.form textarea:focus,
+.offer-help-form input:focus,
+.offer-help-form textarea:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+.form button,
+.offer-help-form button {
+  padding: 0.75rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.form button:hover,
+.offer-help-form button:hover {
+  background-color: #2980b9;
+}
+
+/* Resources specific styling */
+.offer-help-form h1 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.offer-help-form label {
+  font-weight: 600;
+  color: #34495e;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.offer-help-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .header {
+    font-size: 2rem;
+  }
+
+  .form,
+  .offer-help-form {
+    padding: 1.5rem;
+  }
+
+  .offer-help-form h1 {
+    font-size: 1.75rem;
+  }
+}

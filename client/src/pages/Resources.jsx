@@ -1,9 +1,8 @@
 import "../css/Form.css";
 import { useState } from "react";
 
-
-function Housing() {
-const [formData, setFormData] = useState({
+function Resources() {
+  const [formData, setFormData] = useState({
     title: "",
     message: "",
     address: "",
@@ -26,63 +25,69 @@ const [formData, setFormData] = useState({
   };
 
   return (
-    <div className="offer-help-form">
-      <h1>Offer Resources</h1>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Title:</label>
-          <input
-            type="text"
-            name="title"
-            value={formData.title}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div>
-          <label>Message:</label>
-          <textarea
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div>
-          <label>Address:</label>
-          <input
-            type="text"
-            name="address"
-            value={formData.address}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div>
-          <label>Availability:</label>
-          <input
-            type="text"
-            name="availability"
-            value={formData.availability}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div>
-          <label>Capacity:</label>
-          <input
-            type="number"
-            name="capacity"
-            value={formData.capacity}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <button type="submit">Submit</button>
-      </form>
+    <div className="container">
+      <div className="offer-help-form">
+        <h1>Offer Resources</h1>
+        <form onSubmit={handleSubmit}>
+          <div>
+            <label htmlFor="title">Title:</label>
+            <input
+              type="text"
+              id="title"
+              name="title"
+              value={formData.title}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div>
+            <label htmlFor="message">Message:</label>
+            <textarea
+              id="message"
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div>
+            <label htmlFor="address">Address:</label>
+            <input
+              type="text"
+              id="address"
+              name="address"
+              value={formData.address}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div>
+            <label htmlFor="availability">Availability:</label>
+            <input
+              type="text"
+              id="availability"
+              name="availability"
+              value={formData.availability}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div>
+            <label htmlFor="capacity">Capacity:</label>
+            <input
+              type="number"
+              id="capacity"
+              name="capacity"
+              value={formData.capacity}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
     </div>
   );
-
 }
 
-export default Housing;
+export default Resources;

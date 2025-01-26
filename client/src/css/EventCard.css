@@ -46,31 +46,7 @@
   
   .event-card:hover .event-overlay {
     opacity: 1;
-  }
-  
-  .event-btn {
-    position: absolute;
-    right: 1rem;
-    bottom: 1rem;
-    color: white;
-    font-size: 1.0rem;
-    padding: 0.5rem;
-    background-color: #6d7d44;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.2s;
-  }
-  
-  .event-btn:hover {
-    background-color: #8fa45c;
-  }
-  
-  .event-btn.active {
-    color: #ff4757;
+    cursor: pointer;
   }
   
   .rating-select {
@@ -89,16 +65,18 @@
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    font-family: 'Poppins', sans-serif; /* Use a modern font */
+
   }
   
   .event-info h3 {
     color: #ffffff;
-    font-size: 1rem;
+    font-size: 2rem;
     margin: 0;
   }
   
   .event-info p {
-    color: #999;
+    color: #b69a69;
     font-size: 0.9rem;
   }
   
@@ -117,9 +95,4 @@
       padding: 0.75rem;
     }
   
-    .event-btn {
-      width: 32px;
-      height: 32px;
-      font-size: 1.2rem;
-    }
   }

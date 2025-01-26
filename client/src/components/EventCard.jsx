@@ -1,21 +1,21 @@
 import React from 'react'
 import "../css/EventCard.css"
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
+
 
 
 function EventCard({event}) {
+    const navigate = useNavigate(); // Initialize navigate
 
     function onEventClick() {
-        alert("clicked")
+        navigate(`/event/${event.id}`); // Navigate to the specific event page
     }
 
     return (
-        <div className="event-card">
+        <div className="event-card" onClick={onEventClick}>
             <div className="event-picture">
                 <img src={event.url} alt={event.title}/>
                 <div className="event-overlay">
-                    <button className="event-btn" onClick={onEventClick}>
-                        Get Help
-                    </button>
                 </div>
             </div>
             <div className="event-info">

@@ -16,6 +16,16 @@
     display: flex;
     gap: 2rem;
   }
+  .head-nav-link {
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+    color: #ffffff; /* Default text color (white) */
+    text-decoration: none; /* Removes the underline */
+    font-family: 'Poppins', sans-serif; /* Use a modern font */
+    font-weight: 500; /* Slightly bold for readability */
+  }
   
   .nav-link {
     font-size: 1rem;

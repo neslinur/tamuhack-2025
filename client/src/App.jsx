@@ -12,7 +12,7 @@ function App() {
     <main className="main-content">
       <Routes>
         <Route path="/" element={<Home />}/>
-        <Route path="/event" element={<Event />}/>
+        <Route path="/event/:id" element={<Event />}/>
         <Route path="/offerhelp" element={<OfferHelp />}/>
 
       </Routes>

@@ -5,7 +5,7 @@ import "../css/NavBar.css"
 function NavBar() {
     return <nav className="navbar">
         <div className="navbar-brand">
-            <Link to="/" className="nav-link">LifeSaver App</Link>
+            <Link to="/" className="head-nav-link">LifeSaver</Link>
         </div>
         <div className="navbar-links">
             <Link to="/" className="nav-link">Home</Link>

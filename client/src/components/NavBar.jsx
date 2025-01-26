@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 function NavBar() {
   const [userLocation, setUserLocation] = useState(null);
-
+ 
   const getUserLocation = () => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
@@ -34,14 +34,11 @@ function NavBar() {
         <Link to="/" className="nav-link">
           Home
         </Link>
-        <Link to="/event" className="nav-link">
-          Event
-        </Link>
         <Link to="/offerhelp" className="nav-link">
           Offer Help
         </Link>
       </div>
-      /* delete later */
+      {/* delete later */}
       <div>
         {userLocation && (
           <div>

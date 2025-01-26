@@ -1,8 +1,15 @@
 import EventCard from "../components/EventCard";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "../css/Home.css";
 
 function Home() {
+  useEffect(() => {
+    fetch("http://localhost:4090")
+      .then((res) => res.json())
+      .then((data) => console.log(data))
+      .catch((err) => console.log(err));
+  }, []);
+
   const events = [
     {
       id: 1,

@@ -3,11 +3,15 @@ import "../css/EventCard.css";
 import { useNavigate } from "react-router-dom";
 
 function EventCard({ event }) {
+  function capitalizeFirstLetter(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  }
+
   const navigate = useNavigate()
   const date = event.time.split("T")[0];
 
   function onEventClick() {
-    navigate(`/event/${event.id}`);
+    navigate(`/event/${event.event_id}`);
   }
 
   return (
@@ -18,7 +22,7 @@ function EventCard({ event }) {
         </div>
       </div>
       <div className="event-info">
-        <h3>{event.title}</h3>
+        <h3>{event.location} - {capitalizeFirstLetter(event.type)}</h3>
         <p className="event-time">{date}, {event.location}</p>
       </div>
     </div>

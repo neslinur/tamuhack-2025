@@ -51,7 +51,7 @@ app.get("/", async (req, res) => {
 });
 
 app.get("/resources", async (req, res) => {
-  const { event_id } = req.query;
+ 
   try {
     const [resourcesTable, metadata2] = await sequelize.query(
       `SELECT * FROM resources WHERE event_id = ${event_id}`
@@ -65,12 +65,12 @@ app.get("/resources", async (req, res) => {
 });
 
 app.get("/houses", async (req, res) => {
-  const { event_id } = req.query;
+
   try {
     const [housesTable, metadata2] = await sequelize.query(
-      `SELECT * FROM houses WHERE event_id = ${event_id}`
+      `SELECT * FROM houses`
     );
-    console.log(event_id);
+    console.log(housesTable);
     res.json(housesTable);
   } catch (err) {
     console.log("There was an error:", err);

@@ -14,7 +14,6 @@ function EventCard({ event }) {
       <div className="event-picture">
         <img src={event.url || "/placeholder.svg"} alt={event.title} />
         <div className="event-overlay">
-          <h3>{event.title}</h3>
         </div>
       </div>
       <div className="event-info">

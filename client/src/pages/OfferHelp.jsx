@@ -1,86 +1,25 @@
-import "../css/Event.css";
-import { useState } from "react";
+import "../css/OfferHelp.css"
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import HelpCard from "../components/HelpCard";
+
 
 function OfferHelp() {
-  const [formData, setFormData] = useState({
-    title: "",
-    message: "",
-    address: "",
-    availability: "",
-    capacity: "",
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission logic here
-    console.log(formData);
-  };
-
-  return (
-    <div className="offer-help-form">
-      <h1>Offer Help During Natural Disasters</h1>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Title:</label>
-          <input
-            type="text"
-            name="title"
-            value={formData.title}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div>
-          <label>Message:</label>
-          <textarea
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div>
-          <label>Address:</label>
-          <input
-            type="text"
-            name="address"
-            value={formData.address}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div>
-          <label>Availability:</label>
-          <input
-            type="text"
-            name="availability"
-            value={formData.availability}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div>
-          <label>Capacity:</label>
-          <input
-            type="number"
-            name="capacity"
-            value={formData.capacity}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <button type="submit">Submit</button>
-      </form>
-    </div>
-  );
+    const help = [
+        {id: 1, title: "Provide Housing", url:"https://static.vecteezy.com/system/resources/thumbnails/000/425/085/small_2x/Multimedia__2814_29.jpg"},
+        {id: 2, title: "Provide Resources", url:"https://static.vecteezy.com/system/resources/previews/002/582/954/non_2x/donation-charity-volunteer-help-social-handshake-assistance-line-style-icon-free-vector.jpg"},
+    ]
+    return (
+    <div className="offerHelp">
+    <h1>Offer Help</h1>
+    <p>Help those in need by providing resources or a place to stay!</p>
+    <p>Sign up now!</p>
+            <div className="help-grid">
+               {help.map(help => (
+                <HelpCard help={help} key={help.id}/>
+                ))} 
+            </div>
+         </div>
+         );
 }
 
-export default OfferHelp;
+export default OfferHelp

@@ -1,0 +1,32 @@
+p {
+    color: #00000082;
+    font-family: 'Poppins', sans-serif; /* Use a modern font */
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif; /* Use a modern font */
+    text-align: center;
+}
+
+.offerHelp {
+    padding: 1rem 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  @media (max-width: 639px) {
+    .offerHelp {
+      padding: .5rem 0;
+    }
+  
+  }
+  
+  .help-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
